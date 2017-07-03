@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".MainActivity" >
+	<LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_above="@+id/musicdetails"
+        android:orientation="vertical" >
+        
+	    <TextView
+	        android:id="@+id/musicListText"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:textSize="30sp"
+	        android:text="@string/music_list" />
+    
+	    <ListView
+	        android:id="@+id/musicList"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_marginLeft="0dp"
+	        android:layout_marginTop="0dp" >
+	    </ListView>
+    
+    </LinearLayout>
+    
+    <LinearLayout
+        android:id="@+id/usercontrols"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="20dp" >
+
+        <ImageButton
+            android:id="@+id/prevbtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:contentDescription="@string/previous"
+            android:src="@drawable/back"
+            android:background="@null"/>
+
+        <ImageButton
+            android:id="@+id/playbtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="20dp"
+            android:contentDescription="@string/playpause"
+            android:src="@drawable/play"
+            android:background="@null"/>
+
+        <ImageButton
+            android:id="@+id/nextbtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:contentDescription="@string/next"
+            android:src="@drawable/next"
+            android:background="@null"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/musicdetails"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/usercontrols"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="5dp"
+        android:orientation="vertical">
+		
+        <TextView
+                android:id="@+id/music_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="@string/music_title" />
+        
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/current_duration"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:text="@string/cur_dur" />
+
+            <SeekBar
+                android:id="@+id/songProgressBar"
+                android:layout_width="210dp"
+                android:layout_height="35dp"
+                android:max="100"/>
+
+            <TextView
+                android:id="@+id/total_duration"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:text="@string/total_dur" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

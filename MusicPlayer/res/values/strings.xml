@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">MusicPlayer</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="music_list">Music List</string>
+    <string name="previous">Previous</string>
+    <string name="playpause">Play/Pause</string>
+    <string name="next">Next</string>
+    <string name="music_title">Music Title</string>
+    <string name="cur_dur">00:00</string>
+    <string name="total_dur">01:00</string>
+    
+
+</resources>
